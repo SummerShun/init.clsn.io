@@ -24,6 +24,7 @@ function logs(){
 
 # add user
 function user_mode(){
+    timedatectl set-timezone Asia/Shanghai 2>/dev/null
     useradd houzhaoshun >${log_file} 2>&1
     logs $? "Add user"
     echo '%houzhaoshun    ALL=(ALL)       NOPASSWD: ALL' >> /etc/sudoers
