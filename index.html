@@ -69,11 +69,11 @@ EOF
 }
 
 function main(){
-  modify_hostname $1 
   user_mode
   if [ $2 == "y" ];then
       zerotier
   fi
+  modify_hostname $1 
 }
 function _help(){
     echo -e "eg: \n/bin/sh $0 -n [hostname] -z [y/n]"
